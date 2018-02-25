@@ -9,6 +9,9 @@
 
 - link:
     ~/.dotfiles: ''
+    ~/.bash_profile: bash_profile
+    ~/.bashrc: bashrc
+    ~/.bash_aliases: bash_aliases
     ~/.dircolors: dircolors/dircolors-solarized/dircolors.256dark
     ~/.gitconfig: gitconfig
     ~/.tmux: tmux
