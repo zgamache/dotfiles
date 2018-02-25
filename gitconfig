@@ -1,0 +1,10 @@
+[user]
+	name = Zak Gamache
+	email = zak.gamache@gmail.com
+[diff]
+	tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+	dt = difftool
+    s = status

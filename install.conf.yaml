@@ -1,0 +1,21 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- shell:
+  - [git submodule update --init --recursive, Installing submodules]
+
+- link:
+    ~/.dotfiles: ''
+    ~/.dircolors: dircolors/dircolors-solarized/dircolors.256dark
+    ~/.gitconfig: gitconfig
+    ~/.tmux: tmux
+    ~/.tmux.conf: tmux.conf
+    ~/.vim: vim
+    ~/.vimrc: vimrc
+
+- shell:
+  - [tmux/plugins/tpm/bin/install_plugins, Installing tmux plugins]
+  - [vim +PluginInstall +qall, Installing vim plugins]
