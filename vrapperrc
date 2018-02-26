@@ -1,0 +1,2 @@
+eclipseuiaction make org.eclipse.ui.project.buildProject
+eclipseuiaction makeall org.eclipse.ui.project.buildAll 
