@@ -26,6 +26,11 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'vim-scripts/a.vim'
 Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-rhubarb'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'kien/ctrlp.vim'
+Plugin 'Quramy/tsuquyomi'
 
 call vundle#end()
 filetype plugin indent on
@@ -35,14 +40,15 @@ filetype plugin indent on
 "-------------------------------------------------------------------------------
 
 " Appearance settings
+let g:solarized_italic = 0
 set background=dark
 silent! colorscheme solarized
-"set relativenumber
 set number
 set cursorline
 set ruler
 set showmatch
 set nowrap
+set nowrapscan
 set colorcolumn=81
 
 " Tab settings
@@ -153,6 +159,8 @@ let g:syntastic_auto_loc_list = 0
 let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
+let g:syntastic_python_python_exec = '/usr/local/bin/python2.7'
+let g:syntastic_python_checkers = ['pylint', 'flake8', 'pep8', 'pyflakes']
 
 "-------------------------------------------------------------------------------
 " CTAGS

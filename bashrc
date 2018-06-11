@@ -135,8 +135,12 @@ arr_to_env_hosts()
 ..()
 {
     local num="$1"
-
     local path=""
+
+    if [[ -z "$num" ]];then
+        num=1
+    fi
+
     for i in $(seq $num); do
         path="../${path}"
     done
@@ -156,6 +160,14 @@ PROMPT_COMMAND='echo -ne "\033]0;$(get_prefix)$(get_title)\a\007"'
 
 # Setup terminal colors
 TERM=xterm-256color
+case "$(uname -s)" in
+    Darwin*)
+        alias ls="ls -G"
+        ;;
+    *)
+        eval "`dircolors -b ~/.dircolors`"
+        ;;
+esac
 
 # Setup DISPLAY for X11 forwarding
 export DISPLAY=:0.0
@@ -164,3 +176,8 @@ export DISPLAY=:0.0
 export HISTCONTROL=ignoredups:erasedups
 shopt -s histappend
 
+
+# Source aliases
+if [ -f ~/.bash_aliases ]; then
+    . ~/.bash_aliases
+fi

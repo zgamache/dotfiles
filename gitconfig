@@ -1,10 +1,17 @@
-[user]
-	name = Zak Gamache
-	email = zak.gamache@gmail.com
 [diff]
 	tool = vimdiff
 [difftool]
 	prompt = false
+[merge]
+    tool = vimdiff
 [alias]
 	dt = difftool
+    mt = mergetool
 	s = status
+    sa = stash apply
+    sd = stash drop
+    sl = stash list
+    sp = stash pop
+    ss = stash save
+[push]
+    default = simple
