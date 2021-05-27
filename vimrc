@@ -108,6 +108,17 @@ endfunction
 command RTW call TrimWhiteSpace()
 
 "-------------------------------------------------------------------------------
+" Newlines
+"-------------------------------------------------------------------------------
+
+function! ExpandEscapedNewlines()
+        %s/\\n/
+/g
+endfunction
+
+command RNL call ExpandEscapedNewlines()
+
+"-------------------------------------------------------------------------------
 " TMUX
 "-------------------------------------------------------------------------------
 
@@ -160,7 +171,7 @@ let g:syntastic_check_on_open = 0
 let g:syntastic_check_on_wq = 0
 
 let g:syntastic_python_python_exec = '/usr/local/bin/python2.7'
-let g:syntastic_python_checkers = ['pylint', 'flake8', 'pep8', 'pyflakes']
+let g:syntastic_python_checkers = ['flake8', 'pylint', 'pep8', 'pyflakes']
 
 "-------------------------------------------------------------------------------
 " CTAGS

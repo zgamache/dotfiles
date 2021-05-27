@@ -5,9 +5,11 @@
 [merge]
     tool = vimdiff
 [alias]
-	dt = difftool
+    b = branch
+    co = checkout
+    dt = difftool
     mt = mergetool
-	s = status
+    s = status
     sa = stash apply
     sd = stash drop
     sl = stash list
